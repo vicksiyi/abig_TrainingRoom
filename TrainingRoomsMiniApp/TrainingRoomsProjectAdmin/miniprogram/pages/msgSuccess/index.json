@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-card": "../../dist/card/index",
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

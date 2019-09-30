@@ -1,0 +1,4 @@
+.content{
+    margin-top: 30rpx;
+    margin-bottom: 40rpx;
+}

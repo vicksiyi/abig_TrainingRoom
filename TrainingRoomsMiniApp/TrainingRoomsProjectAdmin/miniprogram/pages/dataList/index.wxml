@@ -1,0 +1,15 @@
+<view>
+    <i-card>
+        <view slot="content">
+            <block wx:for="{{list}}">
+                <i-tag class="i-tags listmar" name="标签一" color="{{item.color}}">
+                    {{item.name}}
+                </i-tag>
+            </block>
+            <i-load-more loading="{{ loadContent }}" />
+        </view>
+    </i-card>
+</view>
+<view class="canvas-ec">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
+</view>
