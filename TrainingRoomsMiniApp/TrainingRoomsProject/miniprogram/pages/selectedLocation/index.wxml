@@ -1,0 +1,46 @@
+<!-- 中间标志 -->
+<view class='view-price'>
+  <view class='view-price-num'>
+    <image class='view-price-img' src='img/seat.png'></image>可选</view>
+  <view class='view-price-num'>
+    <image class='view-price-img' src='img/noseat.png'></image>不可选</view>
+  <view class='view-price-num'>
+    <image class='view-price-img' src='img/select.png'></image>已选</view>
+  <view class='view-price-num'>
+    <image class='view-price-img' src='img/seatss.png'></image>有人</view>
+</view>
+<!-- 座位 -->
+<view class='view-all'>
+  <view class='view-price-column'>
+    <block wx:for="{{seatClumn}}">
+      <view class='view-price-column-num' style='background:{{item.color}};'>
+        <text style='width:100%;text-align:center;'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <view style='width:80%;'>
+    <view wx:for="{{seatAll}}" wx:for-item="all" wx:for-index="allIdx" class='view-seat-all'>
+      <view class='view-up-seat'>
+        <view class='view-left-seat-up'>
+          <view wx:for="{{all.A}}" wx:for-index="itemIdx">
+            <image bindtap='clickSeat' data-All='{{allIdx}}' data-On='A' data-Item="{{itemIdx}}" class='view-price-img-up' style='transform: rotate(180deg);' src='img/{{item.name == "*" ? "noseat":(item.name ? "seatss":(item.nameSeat == selectSeat ? "select":"seat"))}}.png'></image>
+          </view>
+        </view>
+        <view class='view-left-seat-up'>
+          <view wx:for="{{all.B}}" wx:for-index="itemIdx">
+            <image bindtap='clickSeat' data-All='{{allIdx}}' data-On='B' data-Item="{{itemIdx}}" class='view-price-img-up' src='img/{{item.name == "*" ? "noseat":(item.name ? "seatss":(item.nameSeat == selectSeat ? "select":"seat"))}}.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class='view-bottom-seat'>
+        过道
+      </view>
+    </view>
+  </view>
+</view>
+<i-button bind:click="submitApplication" wx:if="{{selectSeat.length}}" type="primary" size="small">申请座位{{selectSeat}}</i-button>
+<i-modal title="持有人" visible="{{ visible1 }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+  <view>{{nameSeatOn}}</view>
+</i-modal>
+<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+<i-message id="message" />

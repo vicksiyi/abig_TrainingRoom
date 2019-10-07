@@ -1,0 +1,114 @@
+.bg {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50%;
+}
+
+.fonts {
+  color: rgb(64, 116, 168);
+  font-size: 100rpx;
+  opacity: 0.4;
+  margin: auto;
+  animation: mymove 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1.0;
+  }
+}
+
+.fonts.line {
+  opacity: 0.4;
+  width: 20%;
+  height: 2rpx;
+  margin-top: 10rpx;
+  background: radial-gradient(rgb(168, 168, 168) 24%, white 100%);
+  font-size: 40rpx;
+  color: #666;
+}
+
+.fonts.name {
+  opacity: 1.0;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+swiper {
+  width: 100%;
+}
+
+
+.meId {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.model {
+  background: #fff;
+  width: 70%;
+  margin: 40% auto;
+}
+
+.model-content {
+  padding: 30rpx;
+  height: 160rpx;
+  font-size: 0.8rem;
+  color: #80848f;
+  overflow: auto;
+}
+
+.model-all {
+  padding: 30rpx;
+  color: #495060;
+}
+
+.model-button {
+  padding-block-end: 20rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  font-size: 35rpx;
+  color: #333;
+  font-family: Helvetica, Arial, "Helvetica Neue", "Droid Sans", "Microsoft YaHei", sans-serif;
+}
+
+
+.canvas {
+  width: 100%;
+  height: 200px;
+}
+
+.person-content {
+  width: 100%;
+  overflow: auto;
+}
